@@ -404,7 +404,7 @@
 				<plugin>
 					<artifactId>maven-war-plugin</artifactId>
 					<configuration>
-						<version>3.0</version>
+						<!-- <version>3.0</version> -->
 						<archive>
 							<addMavenDescriptor>false</addMavenDescriptor>
 						</archive>
