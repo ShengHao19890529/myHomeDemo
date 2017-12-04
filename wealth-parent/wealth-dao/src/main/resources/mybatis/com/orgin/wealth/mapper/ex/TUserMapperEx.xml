@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.orgin.wealth.dao.ex.TUserMapperEx" >
+  
+  <select id="queryByCondition" resultMap="com.orgin.wealth.dao.TUserMapper.BaseResultMap">
+    select 
+    	<include refid="com.orgin.wealth.dao.TUserMapper.Base_Column_List" />
+    from 
+    	t_user
+    where 
+    		1=1
+    	<if test="userName != null and userName != ''" >
+    		and USER_NAME = #{userName,jdbcType=VARCHAR}
+	    </if>
+	    <if test="password != null and password != ''" >
+    		and PASSWORD = #{password,jdbcType=VARCHAR}
+	    </if>
+    
+  </select>
+  
+</mapper>
